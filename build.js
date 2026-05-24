@@ -91,3 +91,39 @@ function main() {
 }
 
 main();
+
+const distDir = path.join(__dirname, 'dist');
+
+// Create dist folder if it doesn't exist
+if (!fs.existsSync(distDir)) {
+  fs.mkdirSync(distDir);
+}
+
+// Files to copy
+const filesToCopy = [
+  'index.html',
+  'reviews.html',
+  'styles.css'
+];
+
+// Copy files
+filesToCopy.forEach(file => {
+  const src = path.join(__dirname, file);
+  const dest = path.join(distDir, file);
+
+  if (fs.existsSync(src)) {
+    fs.copyFileSync(src, dest);
+    console.log(`Copied ${file}`);
+  }
+});
+
+// Copy assets folder if it exists
+const assetsSrc = path.join(__dirname, 'assets');
+const assetsDest = path.join(distDir, 'assets');
+
+if (fs.existsSync(assetsSrc)) {
+  fs.cpSync(assetsSrc, assetsDest, { recursive: true });
+  console.log('Copied assets folder');
+}
+
+console.log('dist folder ready');
