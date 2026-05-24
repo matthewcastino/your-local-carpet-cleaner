@@ -14,20 +14,75 @@
 <script>tailwind.config={theme:{extend:{colors:{"slate-blue-accent":"#4A5D6E","charcoal":"#1A1A1A","ink-black":"#0D0D0D","soft-grey":"#2D2D2D","on-surface-variant":"#c4c7c7","surface-container":"#1e1e1e","outline":"#2D2D2D","surface":"#0D0D0D","background":"#0D0D0D","primary":"#ffffff"},borderRadius:{DEFAULT:"0px",full:"9999px"}}}}</script>
 <style>
 .gallery-tab { padding:10px 20px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:transparent;border:1px solid #2D2D2D;color:#c4c7c7;cursor:pointer;transition:all .2s; }
-.gallery-tab.active,.gallery-tab:hover { background:#4A5D6E;border-color:#4A5D6E;color:#fff; }
-.gallery-item { overflow:hidden;background:#1A1A1A;border:1px solid #2D2D2D;aspect-ratio:1;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;color:#444748;font-size:12px;transition:border-color .2s; }
-.gallery-item:hover { border-color:#4A5D6E; }
-.gallery-item .label { font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#c4c7c7;text-align:center;padding:0 8px; }
+.gallery-tab.active,.gallery-tab:hover { background:#ffffff;border-color:#ffffff;color:#0D0D0D; }
 
-/* Before/after slider */
-.before-after-slider { position:relative;overflow:hidden;background:#1A1A1A;border:1px solid #2D2D2D;user-select:none; }
-.ba-before { position:absolute;inset:0;background:#1A1A1A;display:flex;align-items:center;justify-content:center;font-size:12px;color:#444748;flex-direction:column;gap:6px; }
-.ba-after { position:absolute;left:0;top:0;bottom:0;width:50%;overflow:hidden;background:#282828;display:flex;align-items:center;justify-content:center;font-size:12px;color:#c4c7c7;flex-direction:column;gap:6px; }
-.ba-handle { position:absolute;top:0;bottom:0;left:50%;width:3px;background:#4A5D6E;cursor:ew-resize;transform:translateX(-50%); }
-.ba-handle::after { content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:36px;height:36px;background:#4A5D6E;border:3px solid #fff;display:flex;align-items:center;justify-content:center; }
-.ba-label { position:absolute;bottom:12px;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px; }
-.ba-label.before-label { right:12px;background:#0D0D0D;color:#c4c7c7; }
-.ba-label.after-label { left:12px;background:#4A5D6E;color:#fff; }
+/* Gallery items with real images */
+.gallery-item {
+  overflow:hidden;
+  aspect-ratio:1;
+  position:relative;
+  background:#1A1A1A;
+  background-size:cover;
+  background-position:center;
+  cursor:pointer;
+  transition:transform .3s;
+}
+.gallery-item::after {
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to top,rgba(0,0,0,.65) 0%,transparent 55%);
+  opacity:.8;
+  transition:opacity .3s;
+}
+.gallery-item:hover { transform:scale(1.02); }
+.gallery-item:hover::after { opacity:1; }
+.gallery-item .label {
+  position:absolute;
+  bottom:0;left:0;right:0;
+  z-index:2;
+  padding:10px 12px;
+  font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:#fff;
+}
+
+/* BA slider (matches index.html implementation) */
+.gal-ba-slider {
+  position:relative;
+  overflow:hidden;
+  cursor:ew-resize;
+  user-select:none;
+  background:#1a1a1a;
+}
+.gal-ba-after,.gal-ba-before {
+  position:absolute;inset:0;
+  background-size:cover;background-position:center;
+}
+.gal-ba-before { clip-path:inset(0 50% 0 0); }
+.gal-ba-handle {
+  position:absolute;top:0;bottom:0;left:50%;
+  transform:translateX(-50%);
+  z-index:4;display:flex;flex-direction:column;align-items:center;
+  pointer-events:auto;cursor:ew-resize;
+}
+.gal-ba-handle-line { width:2px;flex:1;background:#fff; }
+.gal-ba-handle-circle {
+  width:36px;height:36px;background:#fff;
+  display:flex;align-items:center;justify-content:center;
+  border-radius:50%;position:absolute;top:50%;transform:translateY(-50%);
+  box-shadow:0 2px 12px rgba(0,0,0,.5);
+}
+.gal-ba-label {
+  position:absolute;top:12px;
+  font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;
+  padding:4px 10px;z-index:3;
+}
+.gal-ba-label--after { right:12px;background:#fff;color:#0D0D0D; }
+.gal-ba-label--before { left:12px;background:#0D0D0D;color:#fff;border:1px solid rgba(255,255,255,.3); }
+.gal-ba-range {
+  position:absolute;inset:0;width:100%;height:100%;
+  opacity:0;cursor:ew-resize;z-index:5;margin:0;
+}
 </style>
 </head>
 <body style="background:#0D0D0D;color:#fff;font-family:'Hanken Grotesk',sans-serif;">
@@ -40,25 +95,61 @@
     <p style="font-size:16px;color:#c4c7c7;max-width:580px;line-height:1.7;">Real results from real jobs across Sydney. Add your photos when they're ready — replace the placeholder tiles below with actual before-and-after images.</p>
   </div></div>
 
-  <!-- BEFORE/AFTER SLIDER -->
+  <!-- BEFORE/AFTER SLIDERS -->
   <section style="padding:72px 0;background:#0D0D0D;border-bottom:1px solid #2D2D2D;">
     <div style="max-width:1200px;margin:0 auto;padding:0 24px;">
       <h2 style="font-family:'Montserrat',sans-serif;font-size:24px;font-weight:700;text-transform:uppercase;color:#fff;margin-bottom:8px;">Before &amp; After</h2>
-      <p style="font-size:14px;color:#c4c7c7;margin-bottom:28px;">Drag the handle to compare. Results are typical of our professional steam cleaning service.</p>
-      <div class="before-after-slider" style="height:420px;max-width:800px;">
-        <div class="ba-before">
-          <span class="material-symbols-outlined" style="font-size:40px;color:#444748;">warning</span>
-          <span>Before — Heavily Soiled Carpet</span>
-          <span style="font-size:11px;color:#444748;">Replace with real before photo</span>
-          <span class="ba-label before-label">Before</span>
+      <p style="font-size:14px;color:#c4c7c7;margin-bottom:28px;">Drag the handle to compare. Real results from real jobs across Sydney.</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;" id="ba-grid">
+
+        <div>
+          <div class="gal-ba-slider" style="aspect-ratio:4/3;">
+            <div class="gal-ba-after" style="background-image:url('images/gallery/481018723_2137519373370506_2736738256435284781_n.jpg');"></div>
+            <div class="gal-ba-before" style="background-image:url('images/gallery/481468377_2137519383370505_467474589905172102_n.jpg');"></div>
+            <div class="gal-ba-handle"><div class="gal-ba-handle-line"></div><div class="gal-ba-handle-circle"><span class="material-symbols-outlined" style="font-size:14px;color:#0D0D0D;">swap_horiz</span></div><div class="gal-ba-handle-line"></div></div>
+            <span class="gal-ba-label gal-ba-label--before">Before</span>
+            <span class="gal-ba-label gal-ba-label--after">After</span>
+            <input type="range" class="gal-ba-range" min="0" max="100" value="50">
+          </div>
+          <p style="padding:10px 0 0;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#c4c7c7;">Carpet Clean · Sydney</p>
         </div>
-        <div class="ba-after">
-          <span class="material-symbols-outlined" style="font-size:40px;color:#4A5D6E;">auto_awesome</span>
-          <span>After — Professionally Cleaned</span>
-          <span style="font-size:11px;color:#c4c7c7;">Replace with real after photo</span>
-          <span class="ba-label after-label">After</span>
+
+        <div>
+          <div class="gal-ba-slider" style="aspect-ratio:4/3;">
+            <div class="gal-ba-after" style="background-image:url('images/gallery/101446757_960854274370361_6647148170499325952_n.jpg');"></div>
+            <div class="gal-ba-before" style="background-image:url('images/gallery/101532093_960854241037031_1831005937662427136_n.jpg');"></div>
+            <div class="gal-ba-handle"><div class="gal-ba-handle-line"></div><div class="gal-ba-handle-circle"><span class="material-symbols-outlined" style="font-size:14px;color:#0D0D0D;">swap_horiz</span></div><div class="gal-ba-handle-line"></div></div>
+            <span class="gal-ba-label gal-ba-label--before">Before</span>
+            <span class="gal-ba-label gal-ba-label--after">After</span>
+            <input type="range" class="gal-ba-range" min="0" max="100" value="50">
+          </div>
+          <p style="padding:10px 0 0;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#c4c7c7;">Upholstery Clean · Revesby</p>
         </div>
-        <div class="ba-handle"></div>
+
+        <div>
+          <div class="gal-ba-slider" style="aspect-ratio:4/3;">
+            <div class="gal-ba-after" style="background-image:url('images/gallery/495998281_18326885005164228_8526066419154963405_n.jpg');"></div>
+            <div class="gal-ba-before" style="background-image:url('images/gallery/495921877_18326884981164228_6010622607646131306_n.jpg');"></div>
+            <div class="gal-ba-handle"><div class="gal-ba-handle-line"></div><div class="gal-ba-handle-circle"><span class="material-symbols-outlined" style="font-size:14px;color:#0D0D0D;">swap_horiz</span></div><div class="gal-ba-handle-line"></div></div>
+            <span class="gal-ba-label gal-ba-label--before">Before</span>
+            <span class="gal-ba-label gal-ba-label--after">After</span>
+            <input type="range" class="gal-ba-range" min="0" max="100" value="50">
+          </div>
+          <p style="padding:10px 0 0;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#c4c7c7;">Mattress Clean · Sydney</p>
+        </div>
+
+        <div>
+          <div class="gal-ba-slider" style="aspect-ratio:4/3;">
+            <div class="gal-ba-after" style="background-image:url('images/gallery/131535131_1116744268781360_389237382249981843_n.jpg');"></div>
+            <div class="gal-ba-before" style="background-image:url('images/gallery/131120693_1116744315448022_4286252293031854768_n.jpg');"></div>
+            <div class="gal-ba-handle"><div class="gal-ba-handle-line"></div><div class="gal-ba-handle-circle"><span class="material-symbols-outlined" style="font-size:14px;color:#0D0D0D;">swap_horiz</span></div><div class="gal-ba-handle-line"></div></div>
+            <span class="gal-ba-label gal-ba-label--before">Before</span>
+            <span class="gal-ba-label gal-ba-label--after">After</span>
+            <input type="range" class="gal-ba-range" min="0" max="100" value="50">
+          </div>
+          <p style="padding:10px 0 0;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#c4c7c7;">Sofa Clean · Sydney</p>
+        </div>
+
       </div>
     </div>
   </section>
@@ -70,32 +161,31 @@
         <button class="gallery-tab active" data-filter="all">All Work</button>
         <button class="gallery-tab" data-filter="carpet">Carpet</button>
         <button class="gallery-tab" data-filter="upholstery">Upholstery</button>
-        <button class="gallery-tab" data-filter="rugs">Rugs</button>
-        <button class="gallery-tab" data-filter="before-after">Before &amp; After</button>
+        <button class="gallery-tab" data-filter="mattress">Mattress</button>
       </div>
-
       <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;" id="gallery-grid">
-        <div class="gallery-item" data-category="carpet"><span class="material-symbols-outlined" style="font-size:36px;color:#4A5D6E;">cleaning_services</span><span class="label">Carpet Clean · Revesby</span></div>
-        <div class="gallery-item" data-category="before-after"><span class="material-symbols-outlined" style="font-size:36px;color:#4A5D6E;">compare</span><span class="label">Before &amp; After · Sefton</span></div>
-        <div class="gallery-item" data-category="upholstery"><span class="material-symbols-outlined" style="font-size:36px;color:#4A5D6E;">chair</span><span class="label">Sofa Clean · Prestons</span></div>
-        <div class="gallery-item" data-category="carpet"><span class="material-symbols-outlined" style="font-size:36px;color:#4A5D6E;">cleaning_services</span><span class="label">Steam Clean · Parramatta</span></div>
-        <div class="gallery-item" data-category="rugs"><span class="material-symbols-outlined" style="font-size:36px;color:#4A5D6E;">layers</span><span class="label">Persian Rug · Bankstown</span></div>
-        <div class="gallery-item" data-category="before-after"><span class="material-symbols-outlined" style="font-size:36px;color:#4A5D6E;">compare</span><span class="label">Pet Stain Removal</span></div>
-        <div class="gallery-item" data-category="upholstery"><span class="material-symbols-outlined" style="font-size:36px;color:#4A5D6E;">chair</span><span class="label">Armchair Clean · Liverpool</span></div>
-        <div class="gallery-item" data-category="carpet"><span class="material-symbols-outlined" style="font-size:36px;color:#4A5D6E;">cleaning_services</span><span class="label">End of Lease · Revesby</span></div>
-        <div class="gallery-item" data-category="before-after"><span class="material-symbols-outlined" style="font-size:36px;color:#4A5D6E;">compare</span><span class="label">Red Wine Removal</span></div>
-        <div class="gallery-item" data-category="rugs"><span class="material-symbols-outlined" style="font-size:36px;color:#4A5D6E;">layers</span><span class="label">Oriental Rug · Chatswood</span></div>
-        <div class="gallery-item" data-category="carpet"><span class="material-symbols-outlined" style="font-size:36px;color:#4A5D6E;">cleaning_services</span><span class="label">Commercial · Sefton Office</span></div>
-        <div class="gallery-item" data-category="upholstery"><span class="material-symbols-outlined" style="font-size:36px;color:#4A5D6E;">chair</span><span class="label">Lounge Suite · Campbelltown</span></div>
+        <div class="gallery-item" data-category="carpet" style="background-image:url('images/gallery/481468377_2137519383370505_467474589905172102_n.jpg')"><span class="label">Carpet · Before</span></div>
+        <div class="gallery-item" data-category="carpet" style="background-image:url('images/gallery/481018723_2137519373370506_2736738256435284781_n.jpg')"><span class="label">Carpet · After</span></div>
+        <div class="gallery-item" data-category="upholstery" style="background-image:url('images/gallery/101532093_960854241037031_1831005937662427136_n.jpg')"><span class="label">Sofa · Before</span></div>
+        <div class="gallery-item" data-category="upholstery" style="background-image:url('images/gallery/101446757_960854274370361_6647148170499325952_n.jpg')"><span class="label">Sofa Clean · Revesby</span></div>
+        <div class="gallery-item" data-category="upholstery" style="background-image:url('images/gallery/131120693_1116744315448022_4286252293031854768_n.jpg')"><span class="label">Grey Sofa · Before</span></div>
+        <div class="gallery-item" data-category="upholstery" style="background-image:url('images/gallery/131535131_1116744268781360_389237382249981843_n.jpg')"><span class="label">Grey Sofa · After</span></div>
+        <div class="gallery-item" data-category="upholstery" style="background-image:url('images/gallery/481174243_2136225620166548_3675936506278201237_n.jpg')"><span class="label">Lounge Suite · Before</span></div>
+        <div class="gallery-item" data-category="upholstery" style="background-image:url('images/gallery/481206092_2136225553499888_1987509932988796771_n.jpg')"><span class="label">Leather Sofa · After</span></div>
+        <div class="gallery-item" data-category="upholstery" style="background-image:url('images/gallery/34258522_460971924358601_6834623651883515904_n.jpg')"><span class="label">Outdoor Sofa · Before</span></div>
+        <div class="gallery-item" data-category="upholstery" style="background-image:url('images/gallery/34122444_460972441025216_6577844616865775616_n.jpg')"><span class="label">Outdoor Sofa · After</span></div>
+        <div class="gallery-item" data-category="upholstery" style="background-image:url('images/gallery/60601891_688331481622643_2991210938004144128_n.jpg')"><span class="label">Fabric Sofa · Before</span></div>
+        <div class="gallery-item" data-category="upholstery" style="background-image:url('images/gallery/60487960_688331434955981_216737179471183872_n.jpg')"><span class="label">Leather Sofa · After</span></div>
+        <div class="gallery-item" data-category="mattress" style="background-image:url('images/gallery/495921877_18326884981164228_6010622607646131306_n.jpg')"><span class="label">Mattress · Before</span></div>
+        <div class="gallery-item" data-category="mattress" style="background-image:url('images/gallery/495998281_18326885005164228_8526066419154963405_n.jpg')"><span class="label">Mattress · After</span></div>
       </div>
-      <p style="font-size:13px;color:#444748;margin-top:20px;text-align:center;">Photos above are placeholder tiles. Replace with real job photos in the <code>images/</code> folder.</p>
     </div>
   </section>
 
   <div class="cta-strip"><div class="container"><h2>Want results like these?</h2><p style="color:#c4c7c7;margin-bottom:28px;">Book a free quote and see what we can do for your home.</p><div class="btn-group"><button class="btn-primary open-modal">Get a Free Quote</button><a href="tel:0451286550" class="btn-outline"><span class="material-symbols-outlined" style="font-size:16px;">call</span>0451 286 550</a></div></div></div>
 </main>
 <div id="site-footer"></div>
-<style>@media(max-width:600px){#gallery-grid{grid-template-columns:1fr 1fr !important}}</style>
+<style>@media(max-width:600px){#gallery-grid{grid-template-columns:1fr 1fr !important}#ba-grid{grid-template-columns:1fr !important}}</style>
 <script src="js/components.js" defer></script>
 <script src="js/main.js" defer></script>
 <script src="js/gallery.js" defer></script>

@@ -3,6 +3,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   initGalleryFilter();
   initBeforeAfter();
+  initGalBASliders();
 });
 
 function initGalleryFilter() {
@@ -23,6 +24,21 @@ function initGalleryFilter() {
         }
       });
     });
+  });
+}
+
+function initGalBASliders() {
+  document.querySelectorAll('.gal-ba-slider').forEach(function(slider) {
+    var range = slider.querySelector('.gal-ba-range');
+    var before = slider.querySelector('.gal-ba-before');
+    var handle = slider.querySelector('.gal-ba-handle');
+    if (!range || !before) return;
+    function update(val) {
+      before.style.clipPath = 'inset(0 ' + (100 - val) + '% 0 0)';
+      if (handle) handle.style.left = val + '%';
+    }
+    update(50);
+    range.addEventListener('input', function() { update(this.value); });
   });
 }
 

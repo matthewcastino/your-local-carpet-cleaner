@@ -344,11 +344,31 @@
 
 /* ── Section/page reusable styles ────────── */
 .page-hero {
-  background: #1A1A1A; padding: 32px 0;
+  background: #1A1A1A; padding: 48px 0 56px;
   border-bottom: 1px solid #2D2D2D;
 }
 .page-hero .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 @media (max-width: 767px) { .page-hero .container { padding: 0 16px; } }
+
+/* Hero with background image */
+.page-hero--img {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  padding: 60px 0 72px;
+}
+.page-hero--img::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(108deg, rgba(0,0,0,0.94) 0%, rgba(0,0,0,0.80) 50%, rgba(0,0,0,0.60) 100%);
+}
+.page-hero--img .container {
+  position: relative;
+  z-index: 1;
+}
+.page-hero--img .breadcrumb a { color: rgba(255,255,255,.6); }
+.page-hero--img .breadcrumb a:hover { color: #fff; }
 
 .breadcrumb {
   display: flex; align-items: center; gap: 6px;
