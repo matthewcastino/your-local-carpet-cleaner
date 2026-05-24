@@ -71,7 +71,7 @@ function buildHeader() {
 
     <!-- Desktop CTA -->
     <div style="display:none;" class="desk-cta-wrap">
-      <a href="tel:${PHONE_LINK}" style="font-size:13px;font-weight:700;color:#c4c7c7;text-decoration:none;letter-spacing:.03em;margin-right:20px;" onmouseenter="this.style.color='#fff'" onmouseleave="this.style.color='#c4c7c7'">${PHONE_DISPLAY}</a>
+      <a href="tel:${PHONE_LINK}" style="font-size:13px;font-weight:700;color:#c4c7c7;text-decoration:none;letter-spacing:.03em;" onmouseenter="this.style.color='#fff'" onmouseleave="this.style.color='#c4c7c7'">${PHONE_DISPLAY}</a>
       <button class="header-cta open-modal">Get a Free Quote</button>
     </div>
 

@@ -81,6 +81,8 @@
 .services-dropdown a:hover { background: #282828; color: #ffffff; }
 
 /* Header CTA */
+.desk-cta-wrap { align-items: center; gap: 20px; }
+
 .header-cta {
   background: #ffffff; color: #0D0D0D;
   padding: 10px 20px; font-size: 11px; font-weight: 700;
