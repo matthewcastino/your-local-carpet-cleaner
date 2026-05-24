@@ -31,16 +31,6 @@ function buildHeader() {
   const svcActive = ['carpet-cleaning','upholstery-cleaning','rug-cleaning','mattress-cleaning','stain-odour-removal','end-of-lease-cleaning','commercial-carpet-cleaning'].includes(page);
 
   return `
-<div id="utility-bar">
-  <div style="max-width:1200px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center;">
-    <a href="tel:${PHONE_LINK}" style="color:#c4c7c7;font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;text-decoration:none;" onmouseenter="this.style.color='#fff'" onmouseleave="this.style.color='#c4c7c7'">
-      <span class="material-symbols-outlined" style="font-size:14px;vertical-align:middle;margin-right:4px;">call</span>Call: ${PHONE_DISPLAY}
-    </a>
-    <a href="mailto:${EMAIL}" style="color:#c4c7c7;font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;text-decoration:none;display:none;" class="util-email" onmouseenter="this.style.color='#fff'" onmouseleave="this.style.color='#c4c7c7'">
-      <span class="material-symbols-outlined" style="font-size:14px;vertical-align:middle;margin-right:4px;">mail</span>Email: ${EMAIL}
-    </a>
-  </div>
-</div>
 
 <header id="main-header">
   <div class="header-inner">
@@ -296,9 +286,6 @@ function buildModal() {
 /* ── Responsive show/hide helpers ─────────── */
 function applyResponsive() {
   const w = window.innerWidth;
-  // Show email in utility bar on sm+
-  const email = document.querySelector('.util-email');
-  if (email) email.style.display = w >= 640 ? 'inline' : 'none';
   // Show logo text on lg+
   document.querySelectorAll('.logo-text').forEach(el => {
     el.style.display = w >= 1024 ? 'block' : 'none';
