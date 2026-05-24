@@ -1,0 +1,51 @@
+/* Design tokens extracted from Stitch export (Heritage Hearth & Harbor — dark theme) */
+:root {
+  /* Colours */
+  --color-ink-black: #0D0D0D;
+  --color-charcoal: #1A1A1A;
+  --color-soft-grey: #2D2D2D;
+  --color-surface: #0D0D0D;
+  --color-surface-container: #1e1e1e;
+  --color-surface-container-high: #282828;
+  --color-surface-container-low: #121212;
+  --color-surface-container-lowest: #080808;
+  --color-primary: #ffffff;
+  --color-on-primary: #0D0D0D;
+  --color-on-surface: #ffffff;
+  --color-on-surface-variant: #c4c7c7;
+  --color-slate-blue-accent: #4A5D6E;
+  --color-outline: #747878;
+  --color-outline-variant: #444748;
+  --color-whatsapp: #25D366;
+  --color-error: #ba1a1a;
+
+  /* Typography */
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Hanken Grotesk', sans-serif;
+
+  /* Font sizes */
+  --text-display-xl: 64px;
+  --text-headline-lg: 40px;
+  --text-headline-lg-mobile: 32px;
+  --text-headline-md: 24px;
+  --text-body-lg: 18px;
+  --text-body-md: 16px;
+  --text-label: 14px;
+
+  /* Spacing (8px grid) */
+  --spacing-unit: 8px;
+  --spacing-stack-sm: 12px;
+  --spacing-stack-md: 32px;
+  --spacing-stack-lg: 64px;
+  --spacing-gutter: 24px;
+  --spacing-margin-mobile: 16px;
+
+  /* Layout */
+  --container-max: 1200px;
+
+  /* Borders & shapes */
+  --radius-card: 0px;      /* Sharp corners — brand rule */
+  --border-card: 1px solid #2D2D2D;
+  --shadow-card: none;
+  --shadow-hover: 0px 4px 12px rgba(0,0,0,0.05);
+}

@@ -1,0 +1,13 @@
+{
+  "name": "your-local-carpet-cleaner",
+  "version": "1.0.0",
+  "description": "Your Local Carpet Cleaner — Sydney carpet and upholstery cleaning website",
+  "private": true,
+  "scripts": {
+    "dev": "npx serve . --listen 3000",
+    "fetch-reviews": "node fetch-reviews.js",
+    "build": "node build.js"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
