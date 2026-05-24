@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Your Local Carpet Cleaner — Website
 
 Static HTML/CSS/JS website for Your Local Carpet Cleaner, Sydney.
@@ -134,3 +135,6 @@ Generate a sitemap at [XML-Sitemaps.com](https://www.xml-sitemaps.com) using you
 - **Email:** nasser@yourlocalcarpetcleaner.com.au
 - **Facebook:** facebook.com/carepluscarpetcleaning
 - **Domain:** yourlocalcarpetcleaner.com.au
+=======
+# your-local-carpet-cleaner
+>>>>>>> 3ec52d0fd89940289bdb92123108a4e6879b70c2
