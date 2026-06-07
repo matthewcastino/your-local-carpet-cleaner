@@ -236,38 +236,6 @@ body {
   flex-shrink: 0;
 }
 
-/* ── Quote strip ─────────────────────── */
-.quote-strip {
-  background: #F0EEE9;
-  border-bottom: 1px solid #E4E2DD;
-  padding: 16px 0;
-}
-.quote-strip-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 24px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-.quote-strip-msg {
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  color: #706C61;
-}
-.quote-strip-actions { display: flex; align-items: center; gap: 20px; }
-.quote-strip-phone {
-  font-size: 14px;
-  font-weight: 700;
-  color: #4A5D4C;
-  text-decoration: none;
-}
-.quote-strip-phone:hover { color: #4D6150; }
-
 /* ── Services grid ───────────────────── */
 .services-grid {
   display: grid;
