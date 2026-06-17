@@ -1,0 +1,282 @@
+[
+  {
+    "slug": "bankstown",
+    "name": "Bankstown",
+    "region": "Canterbury-Bankstown",
+    "regionLabel": "South-West Sydney",
+    "intro": "One of south-western Sydney's busiest residential and commercial centres, Bankstown's mix of apartments, townhouses and family homes means we see just about every carpet and upholstery type going. We're also regulars at local restaurants, retail spaces and offices needing scheduled commercial carpet care.",
+    "nearby": ["Yagoona", "Greenacre", "Sefton", "Punchbowl", "Birrong", "Bass Hill", "Georges Hall", "Regents Park"]
+  },
+  {
+    "slug": "liverpool",
+    "name": "Liverpool",
+    "region": "Liverpool & Fairfield",
+    "regionLabel": "South-West Sydney",
+    "intro": "Liverpool is one of our most consistent service areas — a large and diverse city with a high proportion of rental properties, meaning end-of-lease carpet cleaning is in constant demand. We work across established residential streets and the growing estates on Liverpool's fringe.",
+    "nearby": ["Prestons", "Casula", "Warwick Farm", "Chipping Norton", "Moorebank", "Hinchinbrook", "Hoxton Park"]
+  },
+  {
+    "slug": "parramatta",
+    "name": "Parramatta",
+    "region": "Parramatta & Surrounds",
+    "regionLabel": "Greater Western Sydney",
+    "intro": "As Sydney's second CBD, Parramatta has seen rapid high-rise development over the past decade — meaning a large share of our work here is in apartment buildings and commercial spaces. We're experienced with strata access requirements and the variety of carpet types found in both older terraces and modern towers.",
+    "nearby": ["Harris Park", "Granville", "Merrylands", "Westmead", "Northmead", "North Parramatta", "Woodville"]
+  },
+  {
+    "slug": "campbelltown",
+    "name": "Campbelltown",
+    "region": "Campbelltown & Macarthur",
+    "regionLabel": "South-West Sydney",
+    "intro": "Campbelltown is the gateway to the Macarthur region and one of our most active service zones in Sydney's south-west. The area's strong mix of owner-occupiers and renters keeps our team busy year-round with everything from family home carpet cleans to commercial end-of-lease work.",
+    "nearby": ["Minto", "Ingleburn", "Leumeah", "Eagle Vale", "Bradbury", "Blair Athol", "Ambarvale", "Raby"]
+  },
+  {
+    "slug": "penrith",
+    "name": "Penrith",
+    "region": "Penrith & Western Sydney",
+    "regionLabel": "Greater Western Sydney",
+    "intro": "Penrith serves as the major hub for Greater Western Sydney, and we cover the full spread — from established family homes in Kingswood and South Penrith to the newer estates of Glenmore Park and Jordan Springs. Fixed-price quotes and a reliability our Penrith customers count on.",
+    "nearby": ["Kingswood", "South Penrith", "Cambridge Park", "Glenmore Park", "Jordan Springs", "Emu Plains", "Cranebrook"]
+  },
+  {
+    "slug": "blacktown",
+    "name": "Blacktown",
+    "region": "Blacktown & North-West",
+    "regionLabel": "Western Sydney",
+    "intro": "Blacktown is one of New South Wales' largest LGAs and one of our busiest service areas in Western Sydney. The combination of long-established family homes and rapid new development means we're out this way most weeks — covering carpet, upholstery and rug cleaning across the full region.",
+    "nearby": ["Marayong", "Seven Hills", "Kings Langley", "Lalor Park", "Kings Park", "Rooty Hill", "Doonside"]
+  },
+  {
+    "slug": "fairfield",
+    "name": "Fairfield",
+    "region": "Liverpool & Fairfield",
+    "regionLabel": "South-West Sydney",
+    "intro": "Fairfield has one of Sydney's highest rental rates, which keeps end-of-lease carpet cleaning in constant demand. Our team services homes and businesses throughout Fairfield and the surrounding suburbs — from long-established residential streets to the commercial precincts along Polding Street.",
+    "nearby": ["Wetherill Park", "Smithfield", "Prairiewood", "Bossley Park", "Canley Vale", "Yennora", "Cabramatta"]
+  },
+  {
+    "slug": "cabramatta",
+    "name": "Cabramatta",
+    "region": "Liverpool & Fairfield",
+    "regionLabel": "South-West Sydney",
+    "intro": "Cabramatta's dense residential streets and high rental rate make it one of our more active service zones in Sydney's south-west. We regularly clean carpets and upholstery in the area's mix of older homes, townhouse complexes and commercial properties.",
+    "nearby": ["Canley Vale", "Canley Heights", "Bonnyrigg", "Mount Pritchard", "Lansvale", "Busby", "Fairfield"]
+  },
+  {
+    "slug": "bondi",
+    "name": "Bondi",
+    "region": "Eastern Suburbs",
+    "regionLabel": "Eastern Sydney",
+    "intro": "Bondi's high rental turnover and concentration of beachside apartments make end-of-lease carpet cleaning a constant requirement. We regularly deal with sand and salt worked deep into carpet fibres — a Bondi specialty — alongside general residential and upholstery cleaning across the suburb.",
+    "nearby": ["Bondi Beach", "North Bondi", "Tamarama", "Bronte", "Bondi Junction", "Waverley", "Clovelly"]
+  },
+  {
+    "slug": "surry-hills",
+    "name": "Surry Hills",
+    "region": "Inner Sydney & City",
+    "regionLabel": "Inner Sydney",
+    "intro": "Surry Hills' dense mix of terraces, apartments and creative-industry offices means our team works here across both residential and commercial jobs. It's one of Sydney's highest-density inner suburbs and one of its highest rental areas — end-of-lease cleans are a staple of our work here.",
+    "nearby": ["Darlinghurst", "Redfern", "Chippendale", "Waterloo", "Paddington", "Alexandria", "Haymarket"]
+  },
+  {
+    "slug": "newtown",
+    "name": "Newtown",
+    "region": "Inner West",
+    "regionLabel": "Inner West Sydney",
+    "intro": "Newtown is Inner West heartland — dense, heavily rented, and full of older terrace homes with the kind of carpet that sees a lot of traffic. We work across residential end-of-lease cleans, ongoing home maintenance, and commercial cleaning for the suburb's many small businesses and venues.",
+    "nearby": ["Enmore", "Stanmore", "Petersham", "Erskineville", "St Peters", "Camperdown", "Marrickville"]
+  },
+  {
+    "slug": "randwick",
+    "name": "Randwick",
+    "region": "Eastern Suburbs",
+    "regionLabel": "Eastern Sydney",
+    "intro": "Randwick's large student and young professional population — driven by proximity to UNSW — creates strong and consistent demand for end-of-lease carpet cleaning. We work across the suburb's wide range of housing stock, from older apartment blocks to heritage homes on tree-lined streets.",
+    "nearby": ["Kingsford", "Kensington", "Coogee", "Maroubra", "Clovelly", "Matraville", "Eastgardens"]
+  },
+  {
+    "slug": "mascot",
+    "name": "Mascot",
+    "region": "Inner Sydney & City",
+    "regionLabel": "Inner Sydney",
+    "intro": "Mascot has undergone one of Sydney's most rapid apartment transformations over the past decade. High-rise density, constant rental turnover and a transient professional population mean our team is here regularly — primarily for apartment carpet cleaning and end-of-lease work.",
+    "nearby": ["Rosebery", "Zetland", "Alexandria", "Botany", "Beaconsfield", "Waterloo", "Eastlakes"]
+  },
+  {
+    "slug": "hurstville",
+    "name": "Hurstville",
+    "region": "St George & South Sydney",
+    "regionLabel": "St George",
+    "intro": "Hurstville is the commercial and residential anchor of the St George area — a dense, busy suburb with a high proportion of apartments and a strong rental market. We work across residential and commercial cleaning jobs throughout Hurstville and the surrounding streets.",
+    "nearby": ["Allawah", "Carlton", "Penshurst", "Beverly Hills", "Narwee", "Mortdale", "Oatley"]
+  },
+  {
+    "slug": "miranda",
+    "name": "Miranda",
+    "region": "Sutherland Shire",
+    "regionLabel": "Sutherland Shire",
+    "intro": "Miranda is the Sutherland Shire's main commercial hub and a regular stop for our team. The area's mix of townhouses, older family homes and modern apartments gives us a wide range of carpet and upholstery work across the suburb and surrounding streets.",
+    "nearby": ["Caringbah", "Gymea", "Sutherland", "Kirrawee", "Jannali", "Oyster Bay", "Bonnet Bay"]
+  },
+  {
+    "slug": "cronulla",
+    "name": "Cronulla",
+    "region": "Sutherland Shire",
+    "regionLabel": "Sutherland Shire",
+    "intro": "Cronulla's coastal lifestyle and mix of permanent residents and holiday properties creates year-round demand for carpet and upholstery cleaning. We handle the sand-and-salt carpet issues that come with beachside living, along with standard residential and end-of-lease work across the suburb.",
+    "nearby": ["Caringbah South", "Woolooware", "Taren Point", "Gymea Bay", "Sylvania", "Miranda", "Kurnell"]
+  },
+  {
+    "slug": "castle-hill",
+    "name": "Castle Hill",
+    "region": "Hills District",
+    "regionLabel": "North-West Sydney",
+    "intro": "Castle Hill is the Hills District's major centre and home to some of Sydney's largest family homes — high-quality carpets and upholstery are the norm out here. We regularly service the area's executive properties, newer estates and commercial spaces throughout the suburb.",
+    "nearby": ["Baulkham Hills", "West Pennant Hills", "Cherrybrook", "Glenhaven", "Dural", "Kellyville", "Norwest"]
+  },
+  {
+    "slug": "rouse-hill",
+    "name": "Rouse Hill",
+    "region": "Hills District",
+    "regionLabel": "North-West Sydney",
+    "intro": "Rouse Hill is one of Sydney's fastest-growing suburbs — new estates, new homes and new carpets that need protecting and maintaining from the start. We service the full spread of Rouse Hill's modern housing estates along with the surrounding growth corridor suburbs.",
+    "nearby": ["Kellyville", "Stanhope Gardens", "Box Hill", "Schofields", "Marsden Park", "Acacia Gardens", "Glenwood"]
+  },
+  {
+    "slug": "narellan",
+    "name": "Narellan",
+    "region": "Campbelltown & Macarthur",
+    "regionLabel": "South-West Sydney",
+    "intro": "Narellan sits at the centre of the Macarthur growth corridor and is surrounded by some of Sydney's newest estates. New carpet in new homes is our most common job out this way — along with end-of-lease work for the suburb's rapidly growing rental stock.",
+    "nearby": ["Narellan Vale", "Mount Annan", "Gregory Hills", "Harrington Park", "Currans Hill", "Smeaton Grange", "Camden"]
+  },
+  {
+    "slug": "st-marys",
+    "name": "St Marys",
+    "region": "Penrith & Western Sydney",
+    "regionLabel": "Greater Western Sydney",
+    "intro": "St Marys and the surrounding suburbs are a well-established part of Greater Western Sydney, with a strong mix of family homes and rental properties. Our team covers the area regularly — carpet and upholstery cleaning for both owner-occupiers and investment properties.",
+    "nearby": ["North St Marys", "Oxley Park", "Colyton", "Cambridge Park", "Werrington", "Kingswood", "Mount Druitt"]
+  },
+  {
+    "slug": "strathfield",
+    "name": "Strathfield",
+    "region": "Inner West",
+    "regionLabel": "Inner West Sydney",
+    "intro": "Strathfield is one of Sydney's most sought-after inner west addresses — quality homes and furnishings are the standard here. We work across the suburb's heritage homes, newer high-rise apartments and surrounding commercial areas, with particular experience in wool and premium carpet care.",
+    "nearby": ["Burwood", "Homebush", "Homebush West", "Flemington", "North Strathfield", "Concord", "Croydon"]
+  },
+  {
+    "slug": "marrickville",
+    "name": "Marrickville",
+    "region": "Inner West",
+    "regionLabel": "Inner West Sydney",
+    "intro": "Marrickville has transformed rapidly over the past decade — high rental demand and a mix of older terrace homes and warehouse conversions keep our team here regularly. It's one of the Inner West's highest-density suburbs and one of our most consistent service areas year-round.",
+    "nearby": ["Sydenham", "Dulwich Hill", "Tempe", "St Peters", "Petersham", "Enmore", "Arncliffe"]
+  },
+  {
+    "slug": "kogarah",
+    "name": "Kogarah",
+    "region": "St George & South Sydney",
+    "regionLabel": "St George",
+    "intro": "Kogarah is one of the St George area's busiest suburban centres — a mix of high-density apartments and older residential streets with strong rental demand. We're in this area regularly for both residential carpet cleaning and commercial upholstery work.",
+    "nearby": ["Rockdale", "Allawah", "Carlton", "Bexley", "Arncliffe", "Brighton-Le-Sands", "Hurstville"]
+  },
+  {
+    "slug": "merrylands",
+    "name": "Merrylands",
+    "region": "Parramatta & Surrounds",
+    "regionLabel": "Greater Western Sydney",
+    "intro": "Merrylands is one of the Parramatta LGA's densest suburbs — a busy mix of older homes, townhouse complexes and apartment blocks with a consistently high rental rate. End-of-lease carpet cleaning is among our most common jobs in this area.",
+    "nearby": ["Granville", "Guildford", "Woodville", "Wentworthville", "Pemulwuy", "South Granville", "Old Guildford"]
+  },
+  {
+    "slug": "auburn",
+    "name": "Auburn",
+    "region": "Canterbury-Bankstown",
+    "regionLabel": "South-West Sydney",
+    "intro": "Auburn sits at the junction of the Canterbury-Bankstown and Parramatta LGAs — one of Sydney's most densely populated and highly rented suburbs. Our team works here consistently, covering carpet and upholstery cleaning for a high volume of rental properties and small businesses.",
+    "nearby": ["Berala", "Lidcombe", "Regents Park", "Granville", "South Granville", "Birrong", "Sefton"]
+  },
+  {
+    "slug": "baulkham-hills",
+    "name": "Baulkham Hills",
+    "region": "Hills District",
+    "regionLabel": "North-West Sydney",
+    "intro": "Baulkham Hills is one of the Hills District's most established and well-regarded suburbs — large family homes, quality carpets and upholstery are the norm. We service the area regularly, from standard residential carpet cleaning to specialist wool and natural fibre rug care.",
+    "nearby": ["Castle Hill", "Seven Hills", "Norwest", "Bella Vista", "Winston Hills", "Toongabbie", "Pennant Hills"]
+  },
+  {
+    "slug": "seven-hills",
+    "name": "Seven Hills",
+    "region": "Blacktown & North-West",
+    "regionLabel": "Western Sydney",
+    "intro": "Seven Hills sits at the point where Parramatta, Blacktown and the Hills District converge — a large, well-established suburb with strong demand for residential carpet and upholstery cleaning. Its central location in Greater Western Sydney makes it a regular part of our service run.",
+    "nearby": ["Blacktown", "Baulkham Hills", "Toongabbie", "Wentworthville", "Girraween", "Arndell Park", "Prospect"]
+  },
+  {
+    "slug": "casula",
+    "name": "Casula",
+    "region": "Liverpool & Fairfield",
+    "regionLabel": "South-West Sydney",
+    "intro": "Casula straddles the boundary between established Liverpool and the newer growth estates pushing south. We service the full range of housing in this area — from established family homes to brand-new builds in the surrounding development corridors.",
+    "nearby": ["Moorebank", "Prestons", "Chipping Norton", "Warwick Farm", "Liverpool", "Hinchinbrook", "Wattle Grove"]
+  },
+  {
+    "slug": "epping",
+    "name": "Epping",
+    "region": "Hills District",
+    "regionLabel": "North-West Sydney",
+    "intro": "Epping sits at the junction of the Hills District, Parramatta LGA and the North Shore — giving it an unusually diverse housing stock that ranges from older brick homes to modern high-density apartment towers. We work here across residential and strata building cleaning jobs.",
+    "nearby": ["North Epping", "Carlingford", "Eastwood", "Dundas Valley", "Rydalmere", "West Pennant Hills", "Cheltenham"]
+  },
+  {
+    "slug": "coogee",
+    "name": "Coogee",
+    "region": "Eastern Suburbs",
+    "regionLabel": "Eastern Sydney",
+    "intro": "Coogee's mix of permanent residents and coastal holiday renters creates strong year-round demand for carpet and upholstery cleaning. Beachside living means sand in carpets is a regular part of our work here — along with standard residential and end-of-lease cleaning.",
+    "nearby": ["Randwick", "Maroubra", "South Coogee", "Clovelly", "Kensington", "Kingsford", "Bronte"]
+  },
+  {
+    "slug": "rockdale",
+    "name": "Rockdale",
+    "region": "St George & South Sydney",
+    "regionLabel": "St George",
+    "intro": "Rockdale is a dense, well-connected St George suburb with a high rental rate and consistent demand for carpet and upholstery cleaning. We cover Rockdale and the surrounding foreshore suburbs regularly as part of our St George service run.",
+    "nearby": ["Arncliffe", "Bexley", "Kogarah", "Brighton-Le-Sands", "Banksia", "Wolli Creek", "Bardwell Park"]
+  },
+  {
+    "slug": "burwood",
+    "name": "Burwood",
+    "region": "Inner West",
+    "regionLabel": "Inner West Sydney",
+    "intro": "Burwood is one of the Inner West's most connected suburbs — well-served by transport and home to a diverse mix of apartments, townhouses and older homes. Strong rental demand and consistent tenant turnover make end-of-lease carpet cleaning a mainstay of our work in this area.",
+    "nearby": ["Strathfield", "Croydon", "Ashfield", "Concord", "Homebush", "Flemington", "Croydon Park"]
+  },
+  {
+    "slug": "lidcombe",
+    "name": "Lidcombe",
+    "region": "Parramatta & Surrounds",
+    "regionLabel": "Greater Western Sydney",
+    "intro": "Lidcombe's proximity to Parramatta and Auburn makes it a well-located hub in Greater Western Sydney. We work across the suburb's mix of older homes and newer apartment developments, with a consistent volume of rental and end-of-lease carpet cleaning jobs.",
+    "nearby": ["Auburn", "Berala", "Regents Park", "Rookwood", "Homebush West", "Granville", "Silverwater"]
+  },
+  {
+    "slug": "prestons",
+    "name": "Prestons",
+    "region": "Liverpool & Fairfield",
+    "regionLabel": "South-West Sydney",
+    "intro": "Prestons is one of Liverpool's established residential suburbs, with a strong mix of family homes and rental properties. Its location between Liverpool and the growing Edmondson Park corridor makes it a natural and regular part of our south-western service run.",
+    "nearby": ["Casula", "Hinchinbrook", "Carnes Hill", "Cecil Hills", "Liverpool", "Edmondson Park", "Moorebank"]
+  },
+  {
+    "slug": "ingleburn",
+    "name": "Ingleburn",
+    "region": "Campbelltown & Macarthur",
+    "regionLabel": "South-West Sydney",
+    "intro": "Ingleburn is one of the Macarthur region's most established suburbs — a large, predominantly residential area with strong demand for carpet and upholstery cleaning from both homeowners and rental property managers. We're in the area regularly as part of our Campbelltown service run.",
+    "nearby": ["Minto", "Macquarie Fields", "Glenfield", "Leumeah", "Campbelltown", "Eagle Vale", "Raby"]
+  }
+]
