@@ -297,16 +297,16 @@ body {
 .svc-grid-card:hover .svc-icon-sm    { color: rgba(255,255,255,0.85); }
 
 .svc-grid-card--cta {
-  background: #1d40ab !important;
+  background: #111111 !important;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  border: 1px solid #1d40ab;
+  border: 1px solid #111111;
 }
 .svc-grid-card--cta::before { display: none; }
-.svc-grid-card--cta:hover { background: #1530a0 !important; }
+.svc-grid-card--cta:hover { background: #000000 !important; }
 .svc-grid-card--cta .svc-grid-title { color: #FFFFFF !important; }
 .svc-grid-card--cta .material-symbols-outlined { color: #FFFFFF !important; }
 
@@ -511,8 +511,8 @@ body {
 }
 
 .process-step--highlight {
-  background: #1d40ab !important;
-  border-color: #1d40ab !important;
+  background: #111111 !important;
+  border-color: #111111 !important;
 }
 .process-step--highlight .process-num { color: rgba(255,255,255,.3); }
 .process-step--highlight .process-label { color: #FFFFFF; }
@@ -591,7 +591,7 @@ body {
   border-radius: 9999px;
   z-index: 3;
 }
-.ba-label--after { right: 12px; background: #1d40ab; color: #fff; }
+.ba-label--after { right: 12px; background: #111111; color: #fff; }
 .ba-label--before { left: 12px; background: rgba(27,28,25,.55); color: #fff; backdrop-filter: blur(6px); }
 
 .ba-handle {
