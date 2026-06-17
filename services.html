@@ -12,144 +12,171 @@
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/components.css">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com?plugins=forms"></script>
-<script>tailwind.config={theme:{extend:{colors:{"slate-blue-accent":"#1d40ab","charcoal":"#E5E7EB","ink-black":"#111111","soft-grey":"#6B7280","on-surface-variant":"#374151","surface-container":"#F8F9FC","surface-container-high":"#F3F4F6","outline":"#C3C8C0","surface":"#FFFFFF","background":"#FFFFFF","primary":"#1d40ab"},borderRadius:{DEFAULT:"0.5rem",full:"9999px"},fontFamily:{heading:["Playfair Display","serif"],body:["Inter","sans-serif"]}}}}</script>
+<style>
+.services-page-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+@media (max-width: 900px) { .services-page-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .services-page-grid { grid-template-columns: 1fr; } }
+
+.svc-card {
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 16px;
+  padding: 36px 32px;
+  text-decoration: none;
+  transition: box-shadow .25s, transform .25s, border-color .25s;
+}
+.svc-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px -10px rgba(29,64,171,0.14);
+  border-color: #1d40ab;
+}
+.svc-card-icon {
+  font-size: 36px;
+  color: #1d40ab;
+  margin-bottom: 18px;
+}
+.svc-card-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #111111;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+.svc-card-desc {
+  font-size: 14px;
+  color: #6B7280;
+  line-height: 1.7;
+  flex: 1;
+  margin-bottom: 20px;
+}
+.svc-card-link {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: #1d40ab;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding-top: 16px;
+  border-top: 1px solid #E5E7EB;
+}
+</style>
 </head>
 <body style="background:#FFFFFF;color:#111111;font-family:'Inter',sans-serif;">
 <div id="site-header"></div>
 <main>
 
   <!-- PAGE HERO -->
-  <section style="position:relative;background-image:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1400&q=80');background-size:cover;background-position:center;padding:72px 0;border-bottom:1px solid #E5E7EB;">
-    <div style="position:absolute;inset:0;background:linear-gradient(108deg,rgba(251,249,244,.95) 0%,rgba(251,249,244,.82) 60%,rgba(251,249,244,.62) 100%);"></div>
-    <div style="max-width:1200px;margin:0 auto;padding:0 24px;position:relative;z-index:1;">
-      <span style="display:inline-block;background:#1d40ab;color:#FFFFFF;font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;padding:5px 12px;margin-bottom:16px;">Professional Solutions</span>
-      <h1 style="font-family:'Playfair Display',serif;font-size:clamp(28px,5vw,48px);font-weight:800;text-transform:uppercase;color:#111111;margin-bottom:14px;line-height:1.1;">Our Services</h1>
-      <p style="font-size:17px;color:#6B7280;max-width:600px;line-height:1.7;">Expert cleaning solutions tailored for Sydney homes and businesses. We combine 20 years of experience with professional-grade equipment to restore your surfaces.</p>
+  <div class="page-hero page-hero--img" style="background-image:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1400&q=80')">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="material-symbols-outlined" style="font-size:14px;">chevron_right</span>
+        <span class="current">Services</span>
+      </nav>
+      <h1 style="font-family:'Playfair Display',serif;font-size:clamp(28px,5vw,48px);font-weight:800;text-transform:uppercase;line-height:1.1;margin-bottom:14px;">Our Services</h1>
+      <p style="font-size:17px;max-width:580px;line-height:1.7;">Expert cleaning solutions for Sydney homes and businesses. 20 years of experience with professional-grade equipment.</p>
     </div>
-  </section>
+  </div>
 
-  <!-- SERVICES BENTO GRID -->
-  <section style="padding:72px 0;background:#FFFFFF;">
-    <div style="max-width:1200px;margin:0 auto;padding:0 24px;">
+  <!-- SERVICES GRID -->
+  <section style="padding:80px 0;background:#FFFFFF;">
+    <div class="container">
+      <div class="services-page-grid">
 
-      <!-- Carpet (large featured) -->
-      <div style="display:grid;grid-template-columns:2fr 1fr;gap:1px;background:#E5E7EB;margin-bottom:1px;">
-        <a href="carpet-cleaning.html" style="text-decoration:none;display:block;background:#FFFFFF;padding:48px;position:relative;min-height:360px;overflow:hidden;transition:background .2s;" onmouseenter="this.style.background='#F8F9FC'" onmouseleave="this.style.background='#FFFFFF'">
-          <div style="position:absolute;right:32px;top:32px;opacity:.08;font-size:120px;color:#111111;font-family:'Playfair Display',serif;font-weight:800;line-height:1;">01</div>
-          <div style="display:flex;align-items:center;gap:8px;margin-bottom:14px;">
-            <span class="material-symbols-outlined" style="color:#1d40ab;font-size:22px;">cleaning_services</span>
-            <span style="font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#1d40ab;">Most Popular</span>
-          </div>
-          <h2 style="font-family:'Playfair Display',serif;font-size:32px;font-weight:700;text-transform:uppercase;color:#111111;margin-bottom:14px;">Carpet Cleaning</h2>
-          <p style="font-size:15px;color:#6B7280;max-width:480px;line-height:1.7;margin-bottom:28px;">Deep steam extraction and dry cleaning methods that remove embedded dirt, allergens, and bacteria from deep within the fibres. Our most requested service, with results that speak for themselves.</p>
-          <span style="display:inline-block;background:#1d40ab;color:#FFFFFF;padding:12px 24px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;">Learn More →</span>
+        <a href="carpet-cleaning.html" class="svc-card">
+          <span class="material-symbols-outlined svc-card-icon">cleaning_services</span>
+          <h2 class="svc-card-title">Carpet Cleaning</h2>
+          <p class="svc-card-desc">Deep steam extraction and dry cleaning that removes embedded dirt, allergens, and bacteria from deep within the fibres. Our most requested service.</p>
+          <span class="svc-card-link">Learn More →</span>
         </a>
-        <a href="upholstery-cleaning.html" style="text-decoration:none;display:flex;flex-direction:column;background:#FFFFFF;padding:36px;transition:background .2s;" onmouseenter="this.style.background='#F8F9FC'" onmouseleave="this.style.background='#FFFFFF'">
-          <span class="material-symbols-outlined" style="font-size:40px;color:#1d40ab;margin-bottom:16px;">chair</span>
-          <h3 style="font-family:'Playfair Display',serif;font-size:22px;font-weight:700;text-transform:uppercase;color:#111111;margin-bottom:10px;">Upholstery Cleaning</h3>
-          <p style="font-size:13px;color:#6B7280;line-height:1.7;margin-bottom:20px;flex:1;">Restoring sofas, armchairs, and dining chairs using fabric-safe chemicals and delicate agitation techniques that won't damage your upholstery.</p>
-          <div style="padding-top:16px;border-top:1px solid #E5E7EB;">
-            <span style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#1d40ab;">Explore Upholstery Care →</span>
-          </div>
+
+        <a href="upholstery-cleaning.html" class="svc-card">
+          <span class="material-symbols-outlined svc-card-icon">chair</span>
+          <h2 class="svc-card-title">Upholstery Cleaning</h2>
+          <p class="svc-card-desc">Restoring sofas, armchairs, and dining chairs using fabric-safe chemicals and gentle techniques that won't damage your upholstery.</p>
+          <span class="svc-card-link">Learn More →</span>
         </a>
+
+        <a href="rug-cleaning.html" class="svc-card">
+          <span class="material-symbols-outlined svc-card-icon">layers</span>
+          <h2 class="svc-card-title">Rug Cleaning</h2>
+          <p class="svc-card-desc">Specialist care for Persian, Oriental, wool, silk blend, and synthetic rugs. On-site and off-site cleaning options available.</p>
+          <span class="svc-card-link">Learn More →</span>
+        </a>
+
+        <a href="mattress-cleaning.html" class="svc-card">
+          <span class="material-symbols-outlined svc-card-icon">bed</span>
+          <h2 class="svc-card-title">Mattress Cleaning</h2>
+          <p class="svc-card-desc">Anti-allergen sanitisation that removes dust mites, bacteria, and body oils — for a genuinely cleaner, healthier night's sleep.</p>
+          <span class="svc-card-link">Learn More →</span>
+        </a>
+
+        <a href="stain-odour-removal.html" class="svc-card">
+          <span class="material-symbols-outlined svc-card-icon">opacity</span>
+          <h2 class="svc-card-title">Stain & Odour Removal</h2>
+          <p class="svc-card-desc">Advanced enzyme treatments for pet accidents, wine spills, coffee stains, and deep-set odours that regular cleaning can't shift.</p>
+          <span class="svc-card-link">Learn More →</span>
+        </a>
+
+        <a href="end-of-lease-cleaning.html" class="svc-card">
+          <span class="material-symbols-outlined svc-card-icon">verified</span>
+          <h2 class="svc-card-title">End of Lease Cleaning</h2>
+          <p class="svc-card-desc">Bond-back guarantee carpet cleaning with a full itemised receipt accepted by real estate agents across Sydney.</p>
+          <span class="svc-card-link">Learn More →</span>
+        </a>
+
+        <a href="commercial-carpet-cleaning.html" class="svc-card">
+          <span class="material-symbols-outlined svc-card-icon">business</span>
+          <h2 class="svc-card-title">Commercial Cleaning</h2>
+          <p class="svc-card-desc">High-traffic maintenance for offices, retail spaces, and hospitality venues. Scheduled after-hours servicing for zero disruption.</p>
+          <span class="svc-card-link">Learn More →</span>
+        </a>
+
+        <a href="leather-cleaning.html" class="svc-card">
+          <span class="material-symbols-outlined svc-card-icon">weekend</span>
+          <h2 class="svc-card-title">Leather Cleaning</h2>
+          <p class="svc-card-desc">Gentle cleaning and conditioning for leather sofas, lounges, and furniture. We lift dirt without drying out or damaging the hide.</p>
+          <span class="svc-card-link">Learn More →</span>
+        </a>
+
+        <a href="water-damage-restoration.html" class="svc-card">
+          <span class="material-symbols-outlined svc-card-icon">water_damage</span>
+          <h2 class="svc-card-title">Water Damage Restoration</h2>
+          <p class="svc-card-desc">Burst pipe, storm, or overflow — fast extraction and drying equipment to limit damage and restore wet carpets and flooring.</p>
+          <span class="svc-card-link">Learn More →</span>
+        </a>
+
+        <a href="tile-and-grout-cleaning.html" class="svc-card">
+          <span class="material-symbols-outlined svc-card-icon">grid_view</span>
+          <h2 class="svc-card-title">Tile & Grout Cleaning</h2>
+          <p class="svc-card-desc">Deep cleaning for tiled floors, kitchens, and bathrooms. We lift ground-in dirt and discolouration from grout lines that mopping alone can't shift.</p>
+          <span class="svc-card-link">Learn More →</span>
+        </a>
+
+        <a href="carpet-and-fabric-protection.html" class="svc-card">
+          <span class="material-symbols-outlined svc-card-icon">verified_user</span>
+          <h2 class="svc-card-title">Carpet & Fabric Protection</h2>
+          <p class="svc-card-desc">Protective treatments applied after cleaning to help your carpets, rugs, and upholstery resist spills and stay looking newer for longer.</p>
+          <span class="svc-card-link">Learn More →</span>
+        </a>
+
       </div>
-
-      <!-- Row 2: Rug, Commercial, Mattress -->
-      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:#E5E7EB;margin-bottom:1px;">
-        <a href="rug-cleaning.html" style="text-decoration:none;display:flex;flex-direction:column;background:#FFFFFF;padding:32px;transition:background .2s;" onmouseenter="this.style.background='#F8F9FC'" onmouseleave="this.style.background='#FFFFFF'">
-          <span class="material-symbols-outlined" style="font-size:40px;color:#1d40ab;margin-bottom:14px;">layers</span>
-          <h3 style="font-family:'Playfair Display',serif;font-size:20px;font-weight:700;text-transform:uppercase;color:#111111;margin-bottom:10px;">Rug Cleaning</h3>
-          <p style="font-size:13px;color:#6B7280;line-height:1.7;margin-bottom:20px;flex:1;">Specialised care for Persian, Oriental, and synthetic rugs. On-site and off-site cleaning options available.</p>
-          <div style="padding-top:14px;border-top:1px solid #E5E7EB;">
-            <span style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#1d40ab;">Rug Care Details →</span>
-          </div>
-        </a>
-        <a href="commercial-carpet-cleaning.html" style="text-decoration:none;display:flex;flex-direction:column;background:#FFFFFF;padding:32px;transition:background .2s;" onmouseenter="this.style.background='#F8F9FC'" onmouseleave="this.style.background='#FFFFFF'">
-          <span class="material-symbols-outlined" style="font-size:40px;color:#111111;margin-bottom:14px;">business</span>
-          <h3 style="font-family:'Playfair Display',serif;font-size:20px;font-weight:700;text-transform:uppercase;color:#111111;margin-bottom:10px;">Commercial Cleaning</h3>
-          <p style="font-size:13px;color:#6B7280;line-height:1.7;margin-bottom:20px;flex:1;">High-traffic maintenance for offices, retail spaces, and hospitality venues. Scheduled after-hours servicing for zero disruption.</p>
-          <div style="padding-top:14px;border-top:1px solid #C3C8C0;">
-            <span style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#111111;">Corporate Packages →</span>
-          </div>
-        </a>
-        <a href="mattress-cleaning.html" style="text-decoration:none;display:flex;flex-direction:column;background:#FFFFFF;padding:32px;transition:background .2s;" onmouseenter="this.style.background='#F8F9FC'" onmouseleave="this.style.background='#FFFFFF'">
-          <span class="material-symbols-outlined" style="font-size:40px;color:#1d40ab;margin-bottom:14px;">bed</span>
-          <h3 style="font-family:'Playfair Display',serif;font-size:20px;font-weight:700;text-transform:uppercase;color:#111111;margin-bottom:10px;">Mattress Cleaning</h3>
-          <p style="font-size:13px;color:#6B7280;line-height:1.7;margin-bottom:20px;flex:1;">Hygienic sanitisation to remove dust mites, allergens, and bacteria — for a healthier night's sleep.</p>
-          <div style="padding-top:14px;border-top:1px solid #E5E7EB;">
-            <span style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#1d40ab;">Health Benefits →</span>
-          </div>
-        </a>
-      </div>
-
-      <!-- Row 3: Stain, End of Lease -->
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#E5E7EB;">
-        <a href="stain-odour-removal.html" style="text-decoration:none;display:flex;gap:20px;align-items:flex-start;background:#FFFFFF;padding:32px;transition:background .2s;" onmouseenter="this.style.background='#F8F9FC'" onmouseleave="this.style.background='#FFFFFF'">
-          <div style="background:#FFFFFF;border:1px solid #E5E7EB;padding:14px;flex-shrink:0;transition:border-color .2s;">
-            <span class="material-symbols-outlined" style="font-size:28px;color:#1d40ab;">opacity</span>
-          </div>
-          <div>
-            <h3 style="font-family:'Playfair Display',serif;font-size:20px;font-weight:700;text-transform:uppercase;color:#111111;margin-bottom:10px;">Stain &amp; Odour Removal</h3>
-            <p style="font-size:13px;color:#6B7280;line-height:1.7;margin-bottom:10px;">Advanced enzyme treatments for pet accidents, wine spills, coffee stains, and deep-set odours that regular cleaning misses.</p>
-            <span style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#1d40ab;">Emergency Service Available</span>
-          </div>
-        </a>
-        <a href="end-of-lease-cleaning.html" style="text-decoration:none;display:flex;gap:20px;align-items:flex-start;background:#FFFFFF;padding:32px;transition:background .2s;" onmouseenter="this.style.background='#F8F9FC'" onmouseleave="this.style.background='#FFFFFF'">
-          <div style="background:#FFFFFF;border:1px solid #E5E7EB;padding:14px;flex-shrink:0;">
-            <span class="material-symbols-outlined" style="font-size:28px;color:#1d40ab;">verified</span>
-          </div>
-          <div>
-            <h3 style="font-family:'Playfair Display',serif;font-size:20px;font-weight:700;text-transform:uppercase;color:#111111;margin-bottom:10px;">End of Lease Cleaning</h3>
-            <p style="font-size:13px;color:#6B7280;line-height:1.7;margin-bottom:10px;">Bond-back guarantee carpet cleaning. We provide the full, itemised receipt required by real estate agents across Sydney.</p>
-            <span style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#1d40ab;">Priority Booking Available</span>
-          </div>
-        </a>
-      </div>
-
-      <!-- Row 4: Leather, Water Damage, Tile & Grout, Fabric Protection -->
-      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#E5E7EB;margin-top:1px;">
-        <a href="leather-cleaning.html" style="text-decoration:none;display:flex;flex-direction:column;background:#FFFFFF;padding:32px;transition:background .2s;" onmouseenter="this.style.background='#F8F9FC'" onmouseleave="this.style.background='#FFFFFF'">
-          <span class="material-symbols-outlined" style="font-size:36px;color:#1d40ab;margin-bottom:14px;">weekend</span>
-          <h3 style="font-family:'Playfair Display',serif;font-size:17px;font-weight:700;text-transform:uppercase;color:#111111;margin-bottom:10px;">Leather Cleaning</h3>
-          <p style="font-size:13px;color:#6B7280;line-height:1.7;margin-bottom:20px;flex:1;">Gentle, fabric-safe cleaning and conditioning for leather sofas and furniture.</p>
-          <div style="padding-top:14px;border-top:1px solid #E5E7EB;">
-            <span style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#1d40ab;">Learn More →</span>
-          </div>
-        </a>
-        <a href="water-damage-restoration.html" style="text-decoration:none;display:flex;flex-direction:column;background:#FFFFFF;padding:32px;transition:background .2s;" onmouseenter="this.style.background='#F8F9FC'" onmouseleave="this.style.background='#FFFFFF'">
-          <span class="material-symbols-outlined" style="font-size:36px;color:#1d40ab;margin-bottom:14px;">water_damage</span>
-          <h3 style="font-family:'Playfair Display',serif;font-size:17px;font-weight:700;text-transform:uppercase;color:#111111;margin-bottom:10px;">Water Damage Restoration</h3>
-          <p style="font-size:13px;color:#6B7280;line-height:1.7;margin-bottom:20px;flex:1;">Fast extraction and structural drying for wet carpets and flooring.</p>
-          <div style="padding-top:14px;border-top:1px solid #E5E7EB;">
-            <span style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#1d40ab;">Learn More →</span>
-          </div>
-        </a>
-        <a href="tile-and-grout-cleaning.html" style="text-decoration:none;display:flex;flex-direction:column;background:#FFFFFF;padding:32px;transition:background .2s;" onmouseenter="this.style.background='#F8F9FC'" onmouseleave="this.style.background='#FFFFFF'">
-          <span class="material-symbols-outlined" style="font-size:36px;color:#1d40ab;margin-bottom:14px;">grid_view</span>
-          <h3 style="font-family:'Playfair Display',serif;font-size:17px;font-weight:700;text-transform:uppercase;color:#111111;margin-bottom:10px;">Tile &amp; Grout Cleaning</h3>
-          <p style="font-size:13px;color:#6B7280;line-height:1.7;margin-bottom:20px;flex:1;">High-pressure hot water extraction restores discoloured grout and tiled floors.</p>
-          <div style="padding-top:14px;border-top:1px solid #E5E7EB;">
-            <span style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#1d40ab;">Learn More →</span>
-          </div>
-        </a>
-        <a href="carpet-and-fabric-protection.html" style="text-decoration:none;display:flex;flex-direction:column;background:#FFFFFF;padding:32px;transition:background .2s;" onmouseenter="this.style.background='#F8F9FC'" onmouseleave="this.style.background='#FFFFFF'">
-          <span class="material-symbols-outlined" style="font-size:36px;color:#1d40ab;margin-bottom:14px;">verified_user</span>
-          <h3 style="font-family:'Playfair Display',serif;font-size:17px;font-weight:700;text-transform:uppercase;color:#111111;margin-bottom:10px;">Carpet &amp; Fabric Protection</h3>
-          <p style="font-size:13px;color:#6B7280;line-height:1.7;margin-bottom:20px;flex:1;">Protective treatments that help repel spills and extend the life of your fabrics.</p>
-          <div style="padding-top:14px;border-top:1px solid #E5E7EB;">
-            <span style="font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#1d40ab;">Learn More →</span>
-          </div>
-        </a>
-      </div>
-
     </div>
   </section>
 
   <!-- CTA STRIP -->
   <div class="cta-strip">
     <div class="container">
-      <h2>Ready to restore your home?</h2>
+      <h2 class="cta-headline">Ready to restore your home?</h2>
       <p style="color:#6B7280;margin-bottom:28px;">Get an instant quote over the phone or via our online form.</p>
       <div class="btn-group">
         <button class="btn-primary open-modal">Get a Free Quote</button>
@@ -160,10 +187,6 @@
 
 </main>
 <div id="site-footer"></div>
-<style>
-@media(max-width:1023px){section div[style*="grid-template-columns:repeat(4,1fr)"]{grid-template-columns:1fr 1fr !important}}
-@media(max-width:767px){section div[style*="grid-template-columns:2fr 1fr"]{grid-template-columns:1fr !important}section div[style*="grid-template-columns:1fr 1fr 1fr"]{grid-template-columns:1fr !important}section div[style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr !important}section div[style*="grid-template-columns:repeat(4,1fr)"]{grid-template-columns:1fr !important}}
-</style>
 <script src="js/components.js" defer></script>
 <script src="js/main.js" defer></script>
 </body>
