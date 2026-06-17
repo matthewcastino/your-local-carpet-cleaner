@@ -800,14 +800,15 @@ body { color: #1A2B32; }
 /* Section header divider: tinted blue instead of flat gray */
 .section-header { border-bottom-color: rgba(29,64,171,0.14); }
 
-/* Hero stats bar: solid blue strip anchoring the bottom of the hero */
+/* Hero stats bar: frosted glass panel */
 .hero-stats-bar {
-  background: #1d40ab;
-  border-top: none;
+  background: rgba(255,255,255,0.55);
+  border-top: 1px solid rgba(29,64,171,0.12);
+  backdrop-filter: blur(16px);
 }
-.hero-stat-n { color: #FFFFFF; }
-.hero-stat-l { color: rgba(255,255,255,0.7); }
-.hero-stat-divider { background: rgba(255,255,255,0.2); }
+.hero-stat-n { color: #111111; }
+.hero-stat-l { color: #6B7280; }
+.hero-stat-divider { background: rgba(29,64,171,0.15); }
 
 /* Service grid cards: 3px blue top accent transforms a plain white card */
 .svc-grid-card { border-top: 3px solid #1d40ab; }

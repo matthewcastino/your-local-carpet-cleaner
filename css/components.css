@@ -293,7 +293,7 @@
 .footer-emergency {
   display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 16px;
   background: transparent;
-  border: 1px solid rgba(255,255,255,0.25);
+  border: none;
   border-radius: 12px;
   padding: 20px 28px;
   margin-bottom: 40px;
