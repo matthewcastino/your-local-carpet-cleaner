@@ -292,25 +292,24 @@
 
 .footer-emergency {
   display: flex; align-items: center; flex-wrap: wrap; gap: 16px;
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.15);
+  background: #1d40ab;
   border-radius: 12px;
   padding: 20px 28px;
   margin-bottom: 40px;
   font-size: 22px; font-weight: 800; color: #FFFFFF; letter-spacing: -0.02em; line-height: 1.2;
 }
 .footer-emergency-icon {
-  font-size: 28px; flex-shrink: 0; opacity: 0.85;
+  font-size: 28px; flex-shrink: 0; opacity: 0.9;
 }
 .footer-emergency-cta {
   margin-left: auto; flex-shrink: 0;
-  font-size: 15px; font-weight: 700; color: #FFFFFF;
-  background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3);
+  font-size: 15px; font-weight: 700; color: #1d40ab;
+  background: #FFFFFF; border: 1px solid rgba(255,255,255,0.4);
   border-radius: 8px; padding: 8px 18px; text-decoration: none;
   transition: background 0.2s;
   white-space: nowrap;
 }
-.footer-emergency-cta:hover { background: rgba(255,255,255,0.25); }
+.footer-emergency-cta:hover { background: #e8eeff; }
 @media (max-width: 767px) {
   .footer-emergency { font-size: 18px; padding: 16px 20px; }
   .footer-emergency-cta { margin-left: 0; }
