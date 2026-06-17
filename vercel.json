@@ -15,6 +15,12 @@
     { "source": "/water-damage-restoration", "destination": "/water-damage-restoration.html", "permanent": true },
     { "source": "/tile-and-grout-cleaning", "destination": "/tile-and-grout-cleaning.html", "permanent": true },
     { "source": "/carpet-and-fabric-protection", "destination": "/carpet-and-fabric-protection.html", "permanent": true },
+    { "source": "/stain-odour-removal", "destination": "/stain-odour-removal.html", "permanent": true },
+    { "source": "/end-of-lease-cleaning", "destination": "/end-of-lease-cleaning.html", "permanent": true },
+
+    { "source": "/gallery", "destination": "/gallery.html", "permanent": true },
+    { "source": "/reviews", "destination": "/reviews.html", "permanent": true },
+    { "source": "/thank-you", "destination": "/thank-you.html", "permanent": true },
 
     { "source": "/service-areas", "destination": "/service-areas.html", "permanent": true },
     { "source": "/sutherland-shire", "destination": "/service-areas.html", "permanent": true },
@@ -55,10 +61,10 @@
     { "source": "/prestons", "destination": "/prestons.html", "permanent": true },
     { "source": "/ingleburn", "destination": "/ingleburn.html", "permanent": true },
 
-    { "source": "/sefton", "destination": "/service-areas.html", "permanent": true },
-    { "source": "/revesby", "destination": "/service-areas.html", "permanent": true },
-    { "source": "/chatswood", "destination": "/service-areas.html", "permanent": true },
-    { "source": "/sydney", "destination": "/service-areas.html", "permanent": true },
+    { "source": "/sefton", "destination": "/sefton.html", "permanent": true },
+    { "source": "/revesby", "destination": "/revesby.html", "permanent": true },
+    { "source": "/chatswood", "destination": "/chatswood.html", "permanent": true },
+    { "source": "/sydney", "destination": "/sydney.html", "permanent": true },
 
     { "source": "/blog", "destination": "/blog.html", "permanent": true },
     { "source": "/blog/:path*", "destination": "/blog.html", "permanent": true }
