@@ -787,14 +787,6 @@ body {
   .process-steps { grid-template-columns: 1fr; }
 }
 
-/* ─── Why Choose Us: blue section ─────────────────────────── */
-.section-why {
-  background: #1d40ab !important;
-  border-bottom-color: transparent;
-}
-.section-why .section-title { color: #FFFFFF; }
-.section-why .section-sub   { color: rgba(255,255,255,0.82); }
-
 /* ─── Colour balance: frequency-over-volume ───────────────────
    Backgrounds stay pure white. Blue injected through micro-elements:
    card borders, icon containers, numbers, badges, typography.
