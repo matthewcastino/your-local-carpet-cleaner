@@ -172,12 +172,12 @@
   padding: 20px; border-top: 1px solid #E5E7EB;
 }
 .drawer-cta button {
-  width: 100%; background: #111111; color: #FFFFFF;
+  width: 100%; background: #1d40ab; color: #FFFFFF;
   padding: 14px; font-size: 12px; font-weight: 600;
   letter-spacing: 0.08em; text-transform: uppercase;
-  border: 2px solid #111111; border-radius: 9999px; cursor: pointer; transition: background 0.2s, color 0.2s;
+  border: 2px solid #1d40ab; border-radius: 9999px; cursor: pointer; transition: background 0.2s, color 0.2s;
 }
-.drawer-cta button:hover { background: #000000; border-color: #000000; }
+.drawer-cta button:hover { background: #1530a0; border-color: #1530a0; }
 .drawer-cta a {
   display: block; text-align: center; margin-top: 10px;
   color: #6B7280; font-size: 12px; font-weight: 500;
@@ -436,14 +436,14 @@
 .cta-strip .btn-group { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; }
 
 .btn-primary {
-  background: #111111; color: #FFFFFF;
+  background: #1d40ab; color: #FFFFFF;
   padding: 14px 32px; font-size: 12px; font-weight: 600;
   letter-spacing: 0.08em; text-transform: uppercase;
-  border: 2px solid #111111; border-radius: 9999px; cursor: pointer; text-decoration: none;
+  border: 2px solid #1d40ab; border-radius: 9999px; cursor: pointer; text-decoration: none;
   display: inline-flex; align-items: center; gap: 8px;
   transition: background 0.2s, color 0.2s, border-color 0.2s, transform 0.2s;
 }
-.btn-primary:hover { background: #000000; border-color: #000000; transform: translateY(-2px); }
+.btn-primary:hover { background: #1530a0; border-color: #1530a0; transform: translateY(-2px); }
 
 .btn-outline {
   background: transparent; color: #1530a0;
