@@ -286,6 +286,25 @@
 @media (min-width: 768px) { .whatsapp-fab svg { width: 32px; height: 32px; } }
 @media (max-width: 480px) { .whatsapp-fab-label { display: none; } }
 
+/* ── Quote FAB (left side) ───────────────── */
+.quote-fab {
+  position: fixed; bottom: 24px; left: 24px;
+  display: flex; align-items: center; gap: 10px;
+  background: #1d40ab; color: #FFFFFF;
+  border: none; border-radius: 9999px;
+  padding: 0 22px 0 18px; height: 56px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px; font-weight: 600;
+  letter-spacing: 0.02em;
+  cursor: pointer; z-index: 900;
+  box-shadow: 0 6px 20px rgba(29,64,171,0.35);
+  transition: transform 0.2s, background 0.2s;
+  white-space: nowrap;
+}
+.quote-fab:hover { background: #1530a0; transform: scale(1.05); }
+@media (min-width: 768px) { .quote-fab { height: 64px; font-size: 15px; } }
+@media (max-width: 480px) { .quote-fab-text { display: none; } .quote-fab { width: 56px; padding: 0; justify-content: center; } }
+
 /* ── Modal submit ────────────────────────── */
 .modal-submit {
   width: 100%; background: #1d40ab; color: #FFFFFF;

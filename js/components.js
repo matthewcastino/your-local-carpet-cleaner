@@ -419,6 +419,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.body.insertAdjacentHTML('beforeend', buildWhatsApp());
   document.body.insertAdjacentHTML('beforeend', buildModal());
+  document.body.insertAdjacentHTML('beforeend', `
+<button class="quote-fab open-modal" aria-label="Book a free quote">
+  <span class="material-symbols-outlined" style="font-size:22px;">calendar_month</span>
+  <span class="quote-fab-text">Book a Free Quote</span>
+</button>`);
 
   applyResponsive();
   window.addEventListener('resize', applyResponsive);
