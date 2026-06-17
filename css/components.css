@@ -87,12 +87,12 @@
 .desk-cta-wrap { align-items: center; gap: 20px; }
 
 .header-cta {
-  background: #111111; color: #FFFFFF;
+  background: #1d40ab; color: #FFFFFF;
   padding: 11px 24px; font-size: 12px; font-weight: 600;
   letter-spacing: 0.06em; text-transform: uppercase;
-  border: 2px solid #111111; border-radius: 9999px; cursor: pointer; transition: background 0.2s, color 0.2s, border-color 0.2s;
+  border: 2px solid #1d40ab; border-radius: 9999px; cursor: pointer; transition: background 0.2s, color 0.2s, border-color 0.2s;
 }
-.header-cta:hover { background: #000000; border-color: #000000; }
+.header-cta:hover { background: #1530a0; border-color: #1530a0; }
 
 /* Mobile header */
 .mobile-header-right { display: flex; align-items: center; gap: 12px; }
@@ -271,13 +271,13 @@
 
 /* ── Modal submit ────────────────────────── */
 .modal-submit {
-  width: 100%; background: #111111; color: #FFFFFF;
+  width: 100%; background: #1d40ab; color: #FFFFFF;
   padding: 14px; font-size: 12px; font-weight: 600;
   letter-spacing: 0.08em; text-transform: uppercase;
-  border: 2px solid #111111; border-radius: 9999px; cursor: pointer; margin-top: 8px;
+  border: 2px solid #1d40ab; border-radius: 9999px; cursor: pointer; margin-top: 8px;
   transition: background 0.2s, color 0.2s;
 }
-.modal-submit:hover { background: #000000; border-color: #000000; }
+.modal-submit:hover { background: #1530a0; border-color: #1530a0; }
 
 /* ── Footer ──────────────────────────────── */
 #site-footer footer {
@@ -429,7 +429,7 @@
 .cta-strip h2 {
   font-family: 'Playfair Display', serif;
   font-size: 32px; font-weight: 600;
-  color: #111111;
+  color: #1530a0;
   letter-spacing: -0.01em; margin-bottom: 24px;
 }
 @media (max-width: 767px) { .cta-strip h2 { font-size: 24px; } }
@@ -466,8 +466,8 @@
   font-size: 15px; font-weight: 600; color: #111111;
   transition: color 0.2s;
 }
-.faq-question:hover { color: #111111; }
-.faq-question .material-symbols-outlined { font-size: 20px; color: #111111; transition: transform 0.3s; }
+.faq-question:hover { color: #1d40ab; }
+.faq-question .material-symbols-outlined { font-size: 20px; color: #1d40ab; transition: transform 0.3s; }
 .faq-question.open .material-symbols-outlined { transform: rotate(45deg); }
 .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.35s ease; }
 .faq-answer.open { max-height: 500px; padding-bottom: 16px; }
@@ -497,7 +497,7 @@
 .svc-card h3 {
   font-family: 'Playfair Display', serif;
   font-size: 18px; font-weight: 600;
-  color: #111111; margin-bottom: 10px;
+  color: #1530a0; margin-bottom: 10px;
 }
 .svc-card p { font-size: 14px; color: #6B7280; line-height: 1.6; margin-bottom: 20px; flex: 1; }
 .svc-card a {
