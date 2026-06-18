@@ -444,8 +444,8 @@ body {
 }
 
 .why-card {
-  background: #F8F9FC;
-  border: 1px solid #E5E7EB;
+  background: #F3F4F6;
+  border: none;
   border-radius: 20px;
   padding: 36px 28px;
   text-align: center;
