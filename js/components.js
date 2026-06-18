@@ -136,11 +136,6 @@ function buildFooter() {
   return `
 <footer>
   <div class="footer-inner">
-    <div class="footer-emergency">
-      <span class="material-symbols-outlined footer-emergency-icon">water_damage</span>
-      <span>24 hour emergency flood &amp; water damage</span>
-      <a href="tel:${PHONE_LINK}" class="footer-emergency-cta">${PHONE_DISPLAY}</a>
-    </div>
     <div class="footer-grid">
       <!-- Col 1: Brand -->
       <div class="footer-col">
