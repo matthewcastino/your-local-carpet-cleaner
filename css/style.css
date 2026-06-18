@@ -294,18 +294,18 @@ body {
 .svc-grid-card .svc-icon-sm    { color: rgba(255,255,255,0.85); }
 
 .svc-grid-card--cta {
-  background: #1d40ab !important;
+  background: #F8F9FC !important;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  border: 1px solid #1d40ab;
+  border: 1px solid #E5E7EB;
 }
 .svc-grid-card--cta::before { display: none; }
-.svc-grid-card--cta:hover { background: #1530a0 !important; }
-.svc-grid-card--cta .svc-grid-title { color: #FFFFFF !important; }
-.svc-grid-card--cta .material-symbols-outlined { color: #FFFFFF !important; }
+.svc-grid-card--cta:hover { background: #EDEEF2 !important; border-color: #111111; }
+.svc-grid-card--cta .svc-grid-title { color: #111111 !important; }
+.svc-grid-card--cta .material-symbols-outlined { color: #111111 !important; }
 
 .svc-icon-sm {
   font-size: 32px;
