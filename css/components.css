@@ -326,7 +326,7 @@
 #site-footer footer {
   background:
     linear-gradient(rgba(29,64,171,0.72), rgba(29,64,171,0.72)),
-    url('/images/sydney-map.jpg') 30% center/cover no-repeat,
+    url('/images/sydney-map.jpg') 10% center/cover no-repeat,
     #1d40ab;
   border-top: none;
 }
