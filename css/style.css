@@ -581,7 +581,7 @@ body {
   border-radius: 9999px;
   z-index: 3;
 }
-.ba-label--after { right: 12px; background: #1d40ab; color: #fff; }
+.ba-label--after { right: 12px; background: rgba(27,28,25,.55); color: #fff; backdrop-filter: blur(6px); }
 .ba-label--before { left: 12px; background: rgba(27,28,25,.55); color: #fff; backdrop-filter: blur(6px); }
 
 .ba-handle {

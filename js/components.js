@@ -151,7 +151,7 @@ function buildFooter() {
           </div>
         </div>
         <p>Family-owned carpet and upholstery cleaning across Sydney. 20 years of trusted service.</p>
-        <p><a href="tel:${PHONE_LINK}" style="color:#FFFFFF;text-decoration:none;font-weight:700;">${PHONE_DISPLAY}</a></p>
+        <p><a href="tel:${PHONE_LINK}" style="color:#111111;text-decoration:none;font-weight:700;">${PHONE_DISPLAY}</a></p>
         <div class="footer-social">
           <a href="https://www.facebook.com/carepluscarpetcleaning/" target="_blank" rel="noopener" aria-label="Facebook" class="footer-social-fb">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 18" fill="#1877F2" width="11" height="20"><path d="M6.5 10.5H9l.5-3H6.5V6c0-.835.164-1.5 1.333-1.5H9.5V1.3C9.129 1.248 7.948 1.15 6.574 1.15 4.257 1.15 2.5 2.71 2.5 5.3V7.5H0v3h2.5V18h4V10.5z"/></svg>
