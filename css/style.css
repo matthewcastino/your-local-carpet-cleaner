@@ -775,7 +775,26 @@ body {
 
 @media (max-width: 500px) {
   .services-grid { grid-template-columns: 1fr; }
-  .why-grid { grid-template-columns: 1fr; }
+  .why-grid { grid-template-columns: 1fr; gap: 10px; }
+  .why-card {
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    grid-template-rows: auto auto;
+    column-gap: 14px;
+    padding: 14px 16px;
+    border-radius: 14px;
+    text-align: left;
+  }
+  .why-icon-wrap {
+    grid-row: 1 / -1;
+    align-self: center;
+    margin: 0;
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+  }
+  .why-title { margin-bottom: 2px; }
+  .why-desc { margin: 0; }
   .process-steps { grid-template-columns: 1fr; gap: 10px; }
   .process-step {
     display: grid;
