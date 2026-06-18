@@ -502,7 +502,7 @@ body {
   font-family: 'Playfair Display', serif;
   font-size: 44px;
   font-weight: 700;
-  color: rgba(255,255,255,0.25);
+  color: rgba(255,255,255,0.70);
   line-height: 1;
   margin-bottom: 16px;
   letter-spacing: -.02em;
@@ -803,8 +803,6 @@ body { color: #1A2B32; }
 /* Why cards: icon container */
 .why-icon-wrap { background: rgba(29,64,171,0.08); border-color: rgba(29,64,171,0.15); }
 
-/* Process steps: faint blue ghost numbers */
-.process-num { color: rgba(29,64,171,0.13); }
 
 /* Split section badge: blue background */
 .split-img-badge { background: #1d40ab; color: #FFFFFF; }
