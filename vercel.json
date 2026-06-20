@@ -1,5 +1,6 @@
 {
   "version": 2,
+  "outputDirectory": "dist",
   "redirects": [
     { "source": "/index", "destination": "/", "permanent": true },
     { "source": "/about-us", "destination": "/about.html", "permanent": true },
