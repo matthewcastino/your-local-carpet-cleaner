@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "npx serve . --listen 3000",
     "fetch-reviews": "node fetch-reviews.js",
-    "build": "rm -rf dist && mkdir dist && cp *.html dist/ && cp -R css dist/ && cp -R js dist/ && cp -R images dist/ && cp -R data dist/"
+    "build": "rm -rf dist && mkdir dist && cp *.html dist/ && cp -R css dist/ && cp -R js dist/ && cp -R images dist/ && cp -R data dist/ && cp robots.txt sitemap.xml llms.txt dist/"
 
   },
   "dependencies": {},
