@@ -68,6 +68,9 @@
     { "source": "/sydney", "destination": "/sydney.html", "permanent": true },
 
     { "source": "/blog", "destination": "/blog.html", "permanent": true },
-    { "source": "/blog/:path*", "destination": "/blog.html", "permanent": true }
+    { "source": "/blog/:path*", "destination": "/blog.html", "permanent": true },
+
+    { "source": "/how-often-should-you-clean-your-carpets-sydney", "destination": "/blog-post-1.html", "permanent": true },
+    { "source": "/how-often-should-you-clean-your-carpets-sydney/", "destination": "/blog-post-1.html", "permanent": true }
   ]
 }
