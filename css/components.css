@@ -284,7 +284,6 @@
 .whatsapp-fab:hover { transform: scale(1.1); }
 .whatsapp-fab svg { width: 28px; height: 28px; fill: #ffffff; }
 @media (min-width: 768px) { .whatsapp-fab svg { width: 32px; height: 32px; } }
-@media (max-width: 480px) { .whatsapp-fab-label { display: none; } }
 
 /* ── Quote FAB (left side) ───────────────── */
 .quote-fab {
@@ -304,12 +303,7 @@
 .quote-fab .material-symbols-outlined { font-size: 14px !important; }
 .quote-fab:hover { background: #1530a0; transform: scale(1.05); }
 @media (max-width: 767px) {
-  .quote-fab {
-    width: 56px; height: 56px; padding: 0;
-    justify-content: center; border-radius: 50%;
-  }
-  .quote-fab .material-symbols-outlined { font-size: 22px !important; }
-  .quote-fab-text { display: none; }
+  .quote-fab { display: none; }
 }
 
 /* ── Modal submit ────────────────────────── */
@@ -332,9 +326,9 @@
 }
 .footer-inner {
   max-width: 1200px; margin: 0 auto;
-  padding: 64px 24px 32px;
+  padding: 44px 24px 24px;
 }
-@media (max-width: 767px) { .footer-inner { padding: 40px 16px 24px; } }
+@media (max-width: 767px) { .footer-inner { padding: 28px 16px 18px; } }
 
 .footer-emergency {
   display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 16px;
@@ -364,7 +358,7 @@
 
 .footer-grid {
   display: grid; grid-template-columns: 1fr 1fr;
-  gap: 40px; margin-bottom: 40px;
+  gap: 28px; margin-bottom: 28px;
 }
 @media (min-width: 768px) {
   .footer-grid { grid-template-columns: 2fr 1fr 1fr; }
@@ -377,14 +371,14 @@
   font-family: 'Playfair Display', serif;
   font-size: 17px; font-weight: 600;
   letter-spacing: 0.02em;
-  color: #111111; margin-bottom: 16px;
-  padding-bottom: 8px; border-bottom: 1px solid rgba(0,0,0,0.15);
+  color: #111111; margin-bottom: 12px;
+  padding-bottom: 6px; border-bottom: 1px solid rgba(0,0,0,0.15);
 }
 .footer-col p {
-  font-size: 15px; color: rgba(0,0,0,0.75); line-height: 1.7; margin-bottom: 12px;
+  font-size: 15px; color: rgba(0,0,0,0.75); line-height: 1.6; margin-bottom: 10px;
 }
 .footer-col ul { list-style: none; padding: 0; margin: 0; }
-.footer-col ul li { margin-bottom: 10px; color: rgba(0,0,0,0.7); }
+.footer-col ul li { margin-bottom: 6px; color: rgba(0,0,0,0.7); }
 .footer-col ul li a {
   font-size: 14px; color: rgba(0,0,0,0.7);
   text-decoration: none; transition: color 0.2s;
@@ -404,11 +398,11 @@
 .footer-social a .material-symbols-outlined { font-size: 18px; }
 
 .footer-areas {
-  padding: 20px 0;
+  padding: 14px 0;
   border-top: 1px solid rgba(0,0,0,0.15);
   border-bottom: 1px solid rgba(0,0,0,0.15);
   display: flex; flex-wrap: wrap; gap: 8px;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 .footer-areas span, .footer-areas a { font-size: 12px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: rgba(0,0,0,0.6); text-decoration: none; }
 .footer-areas span.sep { color: rgba(0,0,0,0.25); }
