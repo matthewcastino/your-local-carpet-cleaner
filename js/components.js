@@ -4,6 +4,7 @@ const PHONE_DISPLAY  = '0451 286 550';
 const PHONE_LINK     = '0451286550';
 const WA_LINK        = 'https://wa.me/61451286550?text=Hi%2C%20I%27d%20like%20to%20get%20a%20quote%20for%20carpet%20cleaning';
 const THANKYOU_URL   = 'thank-you.html';
+const BUSINESS_HOURS_DISPLAY = 'Monday - Saturday 8am - 530pm';
 
 /* Resolve paths relative to site root when pages are in subdirectories */
 function root(path) {
@@ -204,6 +205,10 @@ function buildFooter() {
           <li><a href="tel:${PHONE_LINK}"><span class="material-symbols-outlined" style="font-size:14px;vertical-align:middle;margin-right:6px;">call</span>${PHONE_DISPLAY}</a></li>
           <li><a href="${WA_LINK}" target="_blank" rel="noopener"><span class="material-symbols-outlined" style="font-size:14px;vertical-align:middle;margin-right:6px;">chat</span>WhatsApp</a></li>
         </ul>
+        <div class="footer-hours">
+          <h5><span class="material-symbols-outlined">schedule</span>Opening Hours</h5>
+          <p>${BUSINESS_HOURS_DISPLAY}</p>
+        </div>
       </div>
     </div>
 

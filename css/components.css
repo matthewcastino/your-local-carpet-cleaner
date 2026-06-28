@@ -391,6 +391,27 @@
 }
 .footer-col ul li a:hover { color: #111111; }
 
+.footer-hours {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(0,0,0,0.15);
+}
+.footer-hours h5 {
+  display: flex; align-items: center; gap: 6px;
+  margin: 0 0 8px;
+  font-size: 12px; font-weight: 800;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: #111111;
+}
+.footer-hours h5 .material-symbols-outlined { font-size: 16px; }
+.footer-hours p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: #111111;
+  line-height: 1.4;
+}
+
 .footer-social { display: flex; gap: 10px; margin-top: 16px; }
 .footer-social a {
   width: 38px; height: 38px;
